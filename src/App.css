@@ -1,11 +1,33 @@
-.App {
-  text-align: center;
+
+.App{
+  background:linear-gradient(-45deg, orange, white,green,white,orange,white,green,white);
+	background-size: 500% 500%;
+	animation: gradient 20s ease-in-out infinite;
+	height: 100vh;
+  height:100vh;
+  scroll-behavior: smooth;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+
+
+
+
+
+
+
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
