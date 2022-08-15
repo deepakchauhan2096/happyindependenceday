@@ -29,32 +29,20 @@
   z-index: 999988;
   color: black;
   top: 0;
-  height: 35vh;
+  height: 32vh;
   transition: .5s;
   right: 0;
   padding: 0;
   overflow-y: auto;
 }
 
-.orange {
-  position: fixed;
-  background: orange;
-  z-index: 999988;
-  color: black;
-  top: 0;
-  height: 35vh;
-  transition: 1s;
-  left: 0;
-  padding: 0;
-  overflow-y: auto;
-}
 
 .white {
   position: fixed;
   background: white;
   z-index: 999988;
   color: black;
-  top: 35vh;
+  top: 32vh;
   height: 35vh;
   transition: 1s;
   right: 0;
@@ -68,7 +56,7 @@
   background: green;
   z-index: 999988;
   color: black;
-  top: 70vh;
+  top: 64vh;
   height: 300vh;
   transition: 1s;
   left: 0;
@@ -78,13 +66,13 @@
 }
 
 .chakra {
-  position: absolute;
+  position: fixed;
   z-index: 9999999;
   display: flex;
   margin: 0 auto;
   justify-content: space-around;
   transform: translate(-50%, -50%);
-  top: 42%;
+  top: 38%;
   left: 0;
   right: 0;
   animation-name: spin;
@@ -94,13 +82,13 @@
 }
 
 .chakra_n{
-  position: absolute;
+  position: fixed;
   z-index: 9999999;
   display: flex;
   margin: 0 auto;
   justify-content: center;
   transform: translate(-50%, -50%);
-  top: 65%;
+  top: 61%;
   left: 50%;
   right: 0;
   text-align: center;
