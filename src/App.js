@@ -1,11 +1,11 @@
 import React from 'react';
-import {useState } from 'react';
+import { useState } from 'react';
 import './App.css';
 
 
 
 const App = () => {
- 
+
   const [orange, setOrange] = useState("100%");
   const [white, setWhite] = useState("100%");
   const [green, setGreen] = useState("100%");
@@ -27,13 +27,13 @@ const App = () => {
   }
 
   const playAudio = () => {
-  
-      // 👇️ use document.getElementById()
-      // const el = document.getElementById('my-element').play();
-  
-      const audio = new Audio('jaanpe.mp3');
-      audio.play();
-  
+
+    // 👇️ use document.getElementById()
+    // const el = document.getElementById('my-element').play();
+
+    const audio = new Audio('jaanpe.mp3');
+    audio.play();
+
   }
 
 
@@ -43,12 +43,12 @@ const App = () => {
     setWhite(0);
     setChakra("none");
     playAudio();
-    
+
   }
 
 
 
- 
+
 
 
 
@@ -56,11 +56,11 @@ const App = () => {
 
   return (
     <>
-      <div className='orange' style={{width:`${orange}`}}></div>
-      <div className='white' onClick={showFlag} style={{width:`${white}`}}></div>
-      <div className='green' style={{width:`${green}`}}></div>
-       <img src="chakra.png" className="chakra"  style={{display:`${chakra}`}}   onClick={showFlag}  alt="chakra" />
-      <b className="chakra_n" onClick={showFlag} style={{display:`${chakra}`}}>CLICK OVER CHAKRA</b>
+      <div className='orange' style={{ width: `${orange}` }}></div>
+      <div className='white' onClick={showFlag} style={{ width: `${white}` }}></div>
+      <div className='green' style={{ width: `${green}` }}></div>
+      <img onClick={showFlag} onMouseDown={showFlag} src="chakra.png" className="chakra" style={{ display: `${chakra}` }} alt="chakra" />
+      <b className="chakra_n" onClick={showFlag} style={{ display: `${chakra}` }}>CLICK OVER ME NAMASTE INDIA 🙏</b>
       <div className="App">
         <div id="pole"></div>
         {/* <audio id="my-element" controls loop preload="true">

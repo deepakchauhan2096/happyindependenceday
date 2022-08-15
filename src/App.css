@@ -68,7 +68,7 @@
 .chakra {
   position: fixed;
   z-index: 99999999;
-  display: flex;
+  display: block;
   margin: 0 auto;
   justify-content: space-around;
   transform: translate(-50%, -50%);
