@@ -57,10 +57,10 @@ const App = () => {
   return (
     <>
       <div className='orange' style={{width:`${orange}`}}></div>
-      <div className='white' style={{width:`${white}`}}></div>
+      <div className='white' onClick={showFlag} style={{width:`${white}`}}></div>
       <div className='green' style={{width:`${green}`}}></div>
-      <img src="chakra.png" onClick={showFlag} className="chakra"  style={{display:`${chakra}`}} width={200} height={200} alt="chakra" />
-      <b className="chakra_n" style={{display:`${chakra}`}}>CLICK OVER CHAKRA</b>
+       <img src="chakra.png" className="chakra"  style={{display:`${chakra}`}}   onClick={showFlag}  alt="chakra" />
+      <b className="chakra_n" onClick={showFlag} style={{display:`${chakra}`}}>CLICK OVER CHAKRA</b>
       <div className="App">
         <div id="pole"></div>
         {/* <audio id="my-element" controls loop preload="true">
