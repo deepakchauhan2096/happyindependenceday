@@ -1,15 +1,18 @@
 import React from 'react';
 import { useState } from 'react';
 import './App.css';
+import './style.scss'
 
 
 
 const App = () => {
 
-  const [orange, setOrange] = useState("100%");
-  const [white, setWhite] = useState("100%");
-  const [green, setGreen] = useState("100%");
-  const [chakra, setChakra] = useState("flex");
+
+
+
+  const [curtainleft, setcurtainleft] = useState("100%");
+  const [curtainRight, setcurtainRight] = useState("100%");
+  const [bansurihide, setbansurihide] = useState("");
   const [value, setValue] = useState("");
   const [name, setName] = useState("Deepak Chauhan");
   const urlParams = new URLSearchParams(window.location.search);
@@ -31,19 +34,18 @@ const App = () => {
     // 👇️ use document.getElementById()
     // const el = document.getElementById('my-element').play();
 
-    const audio = new Audio('jaanpe.mp3');
+    const audio = new Audio('audio.mp3');
     audio.play();
 
   }
 
 
-  const showFlag = () => {
-    setGreen(0);
-    setOrange(0);
-    setWhite(0);
-    setChakra("none");
+  const openCurtain = () => {
+    setcurtainRight(0);
+    setcurtainleft(0);
+    setbansurihide("none");
+    // setChakra("none");
     playAudio();
-
   }
 
 
@@ -56,12 +58,31 @@ const App = () => {
 
   return (
     <>
-      <div className='orange' style={{ width: `${orange}` }}></div>
-      <div className='white' onClick={showFlag} style={{ width: `${white}` }}></div>
-      <div className='green' style={{ width: `${green}` }}></div>
-      <img onClick={showFlag} onMouseDown={showFlag} src="chakra.png" className="chakra" style={{ display: `${chakra}` }} alt="chakra" />
-      <b className="chakra_n" onClick={showFlag} style={{ display: `${chakra}` }}>CLICK OVER ME NAMASTE INDIA 🙏</b>
+
+      {/* <img src="flowers.png" className="flowers"  style={{ display:`${bansurihide}`}} onClick={openCurtain} alt="curtian" />
+      <img src="flowers.png" className="flowers1"  style={{ display:`${bansurihide}`}} onClick={openCurtain} alt="curtian" /> */}
+
+      {/* <b className="chakra_n" onClick={showFlag} style={{ display: `${chakra}` }}>CLICK OVER ME NAMASTE INDIA 🙏</b> */}
+      <div className="pyro">
+          <div className="before"></div>
+          <div className="after"></div>
+      </div>
       <div className="App">
+        
+        <img src="curtain.png" className='pankhl' style={{ width: `${curtainleft}` }} alt="curtain" />
+
+        <img src="curtain.png" className='pankhr' style={{ width: `${curtainRight}` }} alt="curtian" />
+
+
+        <img src="krishna.png" className="krishna" style={{ display: `${bansurihide}` }} alt="curtian" />
+
+        <img src="bansuri.png" className="bansuri" style={{ display: `${bansurihide}` }} onClick={openCurtain} alt="curtian" />
+        <div className="bansuri-text" style={{ display: `${bansurihide}` }} >
+          <div>छू दो ये बाँसुरी </div>
+          <div>कान्हा बुला रहा है</div>
+          <div>अंदर बैठे वो मुरली बजा रहा है।</div>
+        </div>
+
         <div id="pole"></div>
         {/* <audio id="my-element" controls loop preload="true">
         <source src="jaanpe.mp3" type="audio/mpeg" />
@@ -87,30 +108,57 @@ const App = () => {
         </div>
         <br /><br />
         <div>
-          <p>{name}</p>
+          <p className='p-0 m-0'>{name}</p>
+          <div className="text-r text-white" style={{ marginBottom: "35px" }}>
+            <div>की तरफ से</div>
+            <duv>
+              जन्माष्टमी की हार्दिक शुभकामनाएं
+            </duv>
+          </div>
         </div>
-        <img src="kiTarafSe.png" alt="india" width={250} height={100} style={{ margin: "0 auto", display: "flex" }} />
-        <br />
-        <img src="main1.png" alt="india" width={300} height={220} style={{ margin: "0 auto", display: "flex" }} />
+        <div className="pyro">
+          <div className="before"></div>
+          <div className="after"></div>
+      </div>
+        <img src="7UVm.gif" alt="india" width={250} height={330} style={{ margin: "0 auto", display: "flex", opacity: "1", borderRadius: "90px" }} />
+        <div className="text text-white" style={{ margin: "22px 0" }}>
+          <div>रूप बड़ा प्यारा है,</div>
+          <div>चेहरा बड़ा निराला है,</div>
+          <div>बड़ी से बड़ी मुसीबत को,</div>
+          <div>कन्हैया जी ने,</div>
+          <div>पल में हल कर डाला है।</div>
+        </div>
+        <div className="pyro">
+          <div className="before"></div>
+          <div className="after"></div>
+      </div>
+        <img src="BwjU.gif" alt="india" width={100} height={160} style={{ margin: "0 auto", display: "flex", borderRadius: "50%" }} />
         <br />
         <p></p>
-        <img src="India_flag-XL-anim.gif" alt="india" style={{ margin: "0 auto", display: "flex" }} />
+        <img src="LvO0.gif" alt="india" style={{ margin: "0 auto", display: "flex" }} />
 
 
-
-
-
-        <h1 id="text" style={{ fontFamily: "cursive", color: "orange" }}>Happy</h1>
-        <h1 id="text" style={{ fontFamily: "cursive", color: "white" }}>Independence</h1>
-        <h1 id="text" style={{ fontFamily: "cursive", color: "green" }}>Day</h1>
+        <img src="giphy.gif" alt="india" width={200} height={160} style={{ margin: "0 auto", display: "flex", borderRadius: "50%" }} />
         <br />
+
+
+        <h4 className="text" classname="text-r" style={{ fontFamily: "", color: "red" }}>माखन चुराकर जिसने खाया</h4>
+        <h2 className="text" style={{ fontFamily: "cursive", color: "yellow" }}>बंसी बजाकर जिसने नचाया</h2>
+        <h2 className="text" style={{ fontFamily: "cursive", color: "green" }}>ख़ुशी मनाओ उसके जन्मदिन की,</h2>
+        <h4 className="text" style={{ fontFamily: "cursive", color: "blue" }}>जिसने दुनिया को प्रेम का पाठ पढ़ाया।</h4>
+        <br />
+
+        <div className="pyro">
+          <div className="before"></div>
+          <div className="after"></div>
+      </div>
 
         <form action={`/${name}`} className="form-inline " style={{ margin: "0 auto", display: "flex", justifyContent: "center" }}>
           <div className="form-group mx-sm-3 mb-2">
             <label for="inputPassword2" className="sr-only">Password</label>
             <input type="text" onChange={handleChange} className="form-control" id="inputPassword2" placeholder="Eg:Deepak chauhan" />
           </div>
-          <button onClick={handleSubmit} type="submit" className="btn btn-success mb-2 ">GENERATE</button>
+          <button onClick={handleSubmit} type="submit" className="btn btn-danger mb-2 ">GENERATE</button>
         </form>
         <b id="text" style={{ fontFamily: "cursive", color: "black" }}>Copyright by Deepakchauhan</b>
         <br />
